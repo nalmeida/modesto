@@ -39,3 +39,6 @@ Use this as the "Publish command" if needed by hosting such as Netlify.
 
 > Serve latest build files at localhost:1337
 
+---
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4e99a990-c943-4861-8d48-4985dabd87e3/deploy-status)](https://app.netlify.com/sites/modesto/deploys)
