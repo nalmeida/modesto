@@ -2,6 +2,8 @@
 
 Um framework CSS simples (fortemente inspirado pelo visual do [CodyFrame](https://codyhouse.co/ds/docs/framework)), para estilizar minimamente um conteúdo tipo "texto" sem precisar adicionar nenhuma classe (ou o mínimo) aos elementos nativos.
 
+👉 Exemplo funcionando em: https://modesto.netlify.app/
+
 > **modesto:** dotado de modéstia; isento de vaidade; simples, despretensioso.
 
 ## Princípios
