@@ -1,0 +1,41 @@
+{
+	"name": "modesto",
+	"description": "Modesto CSS Framework",
+	"version": "1.0.0",
+	"main": "public/index.html",
+	"author": "nalmeida",
+	"scripts": {
+		"scss": "node-sass src/sass/modesto.scss public/css/modesto.css",
+		"css:min": "cp public/css/modesto.css public/css/modesto.$npm_package_version.min.css; postcss public/css/*.min.css -u autoprefixer cssnano -r -m",
+
+		"copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
+		"copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
+		"copy": "npm run copy:assets && npm run copy:html",
+
+		"watch:html": "onchange 'src/*.html' 'src/**/*.html' -- npm run copy:html",
+		"watch:sass": "node-sass --watch src/sass -o public/css",
+		"watch:assets": "onchange 'src/assets/**/*' -- npm run copy:assets",
+		"watch": "npm run watch:html & npm run watch:sass & npm run watch:assets",
+
+		"serve": "browser-sync start --server public --files public --port 1337 --no-open ",
+		"develop": "npm run copy && npm run scss ; npm run watch & npm run serve",
+		"build": "npm run copy && npm run scss ; npm run css:min",
+		"bump": "npm --no-git-tag-version version"
+	},
+	"dependencies": {
+		"autoprefixer": "^9.5.0",
+		"browser-sync": "^2.26.3",
+		"copyfiles": "^2.1.0",
+		"cssnano": "^4.1.10",
+		"node-sass": "^4.14.1",
+		"onchange": "^7.0.1",
+		"postcss-cli": "^7.1.1"
+	},
+	"browserslist": [
+		"last 2 versions"
+	],
+	"devDependencies": {},
+	"optionalDependencies": {
+		"fsevents": "^2.1.3"
+	}
+}
