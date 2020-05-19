@@ -1,7 +1,7 @@
 {
 	"name": "modesto",
 	"description": "Modesto CSS Framework",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "public/index.html",
 	"author": "nalmeida",
 	"scripts": {
@@ -18,7 +18,7 @@
 		"watch": "npm run watch:html & npm run watch:sass & npm run watch:assets",
 
 		"serve": "browser-sync start --server public --files public --port 1337 --no-open ",
-		"develop": "npm run copy && npm run scss ; npm run watch & npm run serve",
+		"develop": "npm run copy && npm run scss ; npm run css:min ; npm run watch & npm run serve",
 		"build": "npm run copy && npm run scss ; npm run css:min",
 		"bump": "npm --no-git-tag-version version"
 	},
