@@ -15,7 +15,6 @@
 
 body.debug:before {
 	content: "STANDARD >= 1280";
-	color: red;
 }
 
 /* LARGE */
@@ -33,7 +32,6 @@ body.debug:before {
 @media screen and (max-width: 768px) {
 	body.debug:before {
 		content: "MEDIUM: 768 <--> 640";
-		color: blue;
 	}
 	:root {
 
@@ -44,10 +42,9 @@ body.debug:before {
 @media screen and (max-width: 640px) {
 	body.debug:before {
 		content: "SMALL <= 640";
-		color: orange;
 	}
 	:root {
-		--font-size: 1em;
+		--font-size: 1.1em;
 	}
 
 }
