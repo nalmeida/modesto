@@ -6,7 +6,7 @@
 	"author": "nalmeida",
 	"scripts": {
 		"scss": "node-sass src/sass/modesto.scss public/css/modesto.css",
-		"css:min": "cp public/css/modesto.css public/css/modesto.$npm_package_version.min.css; postcss public/css/*.min.css -u autoprefixer cssnano -r -m",
+		"css:min": "cp public/css/modesto.css public/css/modesto.min.css; postcss public/css/*.min.css -u autoprefixer cssnano -r -m",
 
 		"copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
 		"copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
