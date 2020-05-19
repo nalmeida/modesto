@@ -21,7 +21,7 @@
 	"scripts": {
 		"scss": "node-sass src/sass/modesto.scss public/css/modesto.css",
 		"css:min": "cp public/css/modesto.css public/css/modesto.min.css; postcss public/css/*.min.css -u autoprefixer cssnano -r -m",
-		"dist": "npm run scss && css:min && cp public/css/*.css . ; cp public/css/*.map . ",
+		"dist": "npm run scss && css:min && cp public/css/*.css . ; cp public/css/*.map . ; npm publish",
 
 		"copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
 		"copy:assets": "copyfiles -u 1 ./src/assets/**/* public",

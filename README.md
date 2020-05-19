@@ -2,9 +2,27 @@
 
 Um framework CSS simples (fortemente inspirado pelo visual do [CodyFrame](https://codyhouse.co/ds/docs/framework)), para estilizar minimamente um conteúdo tipo "texto" sem precisar adicionar nenhuma classe (ou o mínimo) aos elementos nativos.
 
-👉 Exemplo funcionando em: https://modesto.netlify.app/
+👉 Documentação e demonstração: https://modesto.netlify.app/
 
 > **modesto:** dotado de modéstia; isento de vaidade; simples, despretensioso.
+
+---
+
+## Utilização
+
+Versão com o [CSS aberto](https://unpkg.com/modesto@latest/modesto.css):
+
+```
+<link rel="stylesheet" href="https://unpkg.com/modesto@latest/modesto.css">
+```
+
+Versão com o [CSS minificado](https://unpkg.com/modesto@latest/modesto.min.css):
+
+```
+<link rel="stylesheet" href="https://unpkg.com/modesto@latest/modesto.min.css">
+```
+
+---
 
 ## Princípios
 
