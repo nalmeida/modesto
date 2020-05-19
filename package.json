@@ -2,11 +2,26 @@
 	"name": "modesto",
 	"description": "Modesto CSS Framework",
 	"version": "1.0.1",
-	"main": "public/index.html",
-	"author": "nalmeida",
+	"main": "modesto.css",
+	"author": "Nicholas Almeida @nalmeida",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nalmeida/modesto.git"
+	},
+	"homepage": "https://modesto.netlify.app/",
+  "keywords": [
+    "css",
+    "stylesheet",
+    "modesto"
+	],
+	"license": "GNU GPLv3",
+	"bugs": {
+		"url": "https://github.com/nalmeida/modesto/issues"
+	},
 	"scripts": {
 		"scss": "node-sass src/sass/modesto.scss public/css/modesto.css",
 		"css:min": "cp public/css/modesto.css public/css/modesto.min.css; postcss public/css/*.min.css -u autoprefixer cssnano -r -m",
+		"dist": "npm run scss && css:min && cp public/css/*.css . ; cp public/css/*.map . ",
 
 		"copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
 		"copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
