@@ -33,12 +33,6 @@ Versão com o [CSS minificado](https://unpkg.com/modesto@latest/modesto.min.css)
 5.  ⚡️ Leve, MUITO leve para se "embedado" direto na página, `1.574 Kb`
 6.  🖥 Desktop first, por que no fundo, no fundo, é assim que a maioria dos programadores monta os layouts
 
----
-
-## Utilizando
-
-TODO
-
 ## Development Scripts
 
 This "bootstrap" is based on the awesome [HTML SASS Jumpstart](https://github.com/5t3ph/html-sass-jumpstart) from [5t3ph](https://github.com/5t3ph).
