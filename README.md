@@ -12,7 +12,7 @@ Um framework CSS simples (fortemente inspirado pelo visual do [CodyFrame](https:
 2.  👋 Independente de qualquer conteúdo externo
 3.  ♿️ Acessível
 4.  🤓 *ClassLess*: evitar ao máximo a necessidade colocar `class` nos elementos
-5.  ⚡️ Leve, MUITO leve para se "embedado" direto na página, `1.705 Kb`
+5.  ⚡️ Leve, MUITO leve para se "embedado" direto na página, `1.574 Kb`
 6.  🖥 Desktop first, por que no fundo, no fundo, é assim que a maioria dos programadores monta os layouts
 
 ---
