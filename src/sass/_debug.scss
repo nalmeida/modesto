@@ -1,0 +1,23 @@
+body.debug:before {
+	content: "X LARGE >= 1280";
+	font-family: monospace;
+	color: red;
+}
+
+@media screen and (max-width: 1024px) {
+	body.debug:before {
+		content: "LARGE 768 <--> 1024";
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body.debug:before {
+		content: "MEDIUM: 640 <--> 768";
+	}
+}
+
+@media screen and (max-width: 640px) {
+	body.debug:before {
+		content: "SMALL <= 640";
+	}
+}
