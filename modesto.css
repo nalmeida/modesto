@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! Modesto CSS 1.0.4 */
+/*! Modesto CSS 1.0.5 */
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
@@ -20,17 +20,17 @@ h5,
 h6 {
   margin: 0; }
 
-html {
-  scroll-behavior: smooth; }
-
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.5;
   text-rendering: optimizeSpeed; }
+
+/* Make images easier to work with */
+img {
+  max-width: 100%; }
 
 /* Inherit fonts for inputs and buttons */
 input,
@@ -38,16 +38,6 @@ button,
 textarea,
 select {
   font: inherit; }
-
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important; }
-  html {
-    scroll-behavior: initial; } }
 
 /* @nalmeida: Reseting margins, paddings and borders  */
 figure,
@@ -70,27 +60,6 @@ li {
   --color-link-visited: #5c20c0;
   --color-bg: #CCCCCC;
   --color-bg-light: #EFEFEF; }
-
-body.debug:before {
-  content: "STANDARD >= 1280"; }
-
-/* LARGE */
-@media screen and (max-width: 1024px) {
-  body.debug:before {
-    content: "1024 <--> 768";
-    color: green; } }
-
-/* MEDIUM */
-@media screen and (max-width: 768px) {
-  body.debug:before {
-    content: "MEDIUM: 768 <--> 640"; } }
-
-/* SMALL */
-@media screen and (max-width: 640px) {
-  body.debug:before {
-    content: "SMALL <= 640"; }
-  :root {
-    --font-size: 1.1em; } }
 
 /* CLASSLESS */
 body {
@@ -261,3 +230,25 @@ button:active {
   box-shadow: none;
   position: relative;
   top: .2em; }
+
+body.debug:before {
+  content: "STANDARD >= 1280";
+  font-family: monospace;
+  color: red; }
+
+/* LARGE */
+@media screen and (max-width: 1024px) {
+  body.debug:before {
+    content: "768 <--> 1024"; } }
+
+/* MEDIUM */
+@media screen and (max-width: 768px) {
+  body.debug:before {
+    content: "MEDIUM: 640 <--> 768"; } }
+
+/* SMALL */
+@media screen and (max-width: 640px) {
+  body.debug:before {
+    content: "SMALL <= 640"; }
+  :root {
+    --font-size: 1.1em; } }
