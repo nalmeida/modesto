@@ -30,7 +30,7 @@ Versão com o [CSS minificado](https://unpkg.com/modesto@latest/modesto.min.css)
 2.  👋 Independente de qualquer conteúdo externo
 3.  ♿️ Acessível
 4.  🤓 *ClassLess*: evitar ao máximo a necessidade colocar `class` nos elementos
-5.  ⚡️ Leve, MUITO leve para se "embedado" direto na página, `1.574 Kb`
+5.  ⚡️ Leve, MUITO leve para se "embedado" direto na página, [GZIPed CSS size](https://img.badgesize.io/nalmeida/modesto/master/modesto.min.css.png?compression=gzip)
 
 ## Development Scripts
 
