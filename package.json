@@ -26,12 +26,11 @@
 		"css:min": "cp public/css/modesto.css public/css/modesto.min.css; postcss public/css/*.min.css -u autoprefixer cssnano -r -m",
 
 		"copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
-		"copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
-		"copy": "npm run copy:assets && npm run copy:html",
+		"copy": "copyfiles -u 1 ./src/*.* ./src/assets/**/* public",
 
 		"watch:html": "onchange 'src/*.html' 'src/**/*.html' -- npm run copy:html",
 		"watch:sass": "node-sass --watch src/sass -o public/css",
-		"watch:assets": "onchange 'src/assets/**/*' -- npm run copy:assets",
+		"watch:assets": "onchange 'src/assets/**/*' -- npm run copy",
 		"watch": "npm run watch:html & npm run watch:sass & npm run watch:assets",
 
 		"serve": "browser-sync start --server public --files public --port 1337 --no-open ",
