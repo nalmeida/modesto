@@ -11,7 +11,10 @@
 	"homepage": "https://modesto.netlify.app/",
   "keywords": [
     "css",
-    "stylesheet",
+		"stylesheet",
+		"classless",
+		"classless-theme",
+		"classless-css ",
     "modesto"
 	],
 	"license": "GNU GPLv3",
@@ -21,7 +24,6 @@
 	"scripts": {
 		"scss": "node-sass src/sass/modesto.scss public/css/modesto.css",
 		"css:min": "cp public/css/modesto.css public/css/modesto.min.css; postcss public/css/*.min.css -u autoprefixer cssnano -r -m",
-		"dist": "npm run scss ; npm run css:min ; cp public/css/*.css . ; cp public/css/*.map . ; npm publish",
 
 		"copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
 		"copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
@@ -35,7 +37,8 @@
 		"serve": "browser-sync start --server public --files public --port 1337 --no-open ",
 		"develop": "npm run copy && npm run scss ; npm run css:min ; npm run watch & npm run serve",
 		"build": "npm run copy && npm run scss ; npm run css:min",
-		"bump": "npm --no-git-tag-version version"
+		"bump": "npm --no-git-tag-version version",
+		"dist": "npm run scss ; npm run css:min ; cp public/css/*.css . ; cp public/css/*.map . ; npm publish && curl -I https://unpkg.com/modesto"
 	},
 	"dependencies": {
 		"autoprefixer": "^9.5.0",
