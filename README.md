@@ -1,4 +1,4 @@
-# Modesto CSS
+# Modesto CSS ![GitHub package.json version](https://img.shields.io/github/package-json/v/nalmeida/modesto)
 
 Um framework CSS simples (fortemente inspirado pelo visual do [CodyFrame](https://codyhouse.co/ds/docs/framework)), para estilizar minimamente um conteúdo tipo "texto" sem precisar adicionar nenhuma classe (ou o mínimo) aos elementos nativos.
 
@@ -10,13 +10,13 @@ Um framework CSS simples (fortemente inspirado pelo visual do [CodyFrame](https:
 
 ## Utilização
 
-Versão com o [CSS aberto](https://unpkg.com/modesto@latest/modesto.css):
+Versão com o [CSS aberto](https://unpkg.com/modesto@latest/modesto.css) ![Standard CSS size](https://img.badgesize.io/nalmeida/modesto/master/modesto.css.png):
 
 ```
 <link rel="stylesheet" href="https://unpkg.com/modesto@latest/modesto.css">
 ```
 
-Versão com o [CSS minificado](https://unpkg.com/modesto@latest/modesto.min.css):
+Versão com o [CSS minificado](https://unpkg.com/modesto@latest/modesto.min.css) ![GZIPed CSS size](https://img.badgesize.io/nalmeida/modesto/master/modesto.min.css.png?compression=gzip):
 
 ```
 <link rel="stylesheet" href="https://unpkg.com/modesto@latest/modesto.min.css">
@@ -31,7 +31,6 @@ Versão com o [CSS minificado](https://unpkg.com/modesto@latest/modesto.min.css)
 3.  ♿️ Acessível
 4.  🤓 *ClassLess*: evitar ao máximo a necessidade colocar `class` nos elementos
 5.  ⚡️ Leve, MUITO leve para se "embedado" direto na página, `1.574 Kb`
-6.  🖥 Desktop first, por que no fundo, no fundo, é assim que a maioria dos programadores monta os layouts
 
 ## Development Scripts
 
