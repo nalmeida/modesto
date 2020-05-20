@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! Modesto CSS 1.0.5 */
+/*! Modesto CSS 1.0.6 */
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
@@ -60,6 +60,10 @@ li {
   --color-link-visited: #5c20c0;
   --color-bg: #CCCCCC;
   --color-bg-light: #EFEFEF; }
+
+@media screen and (max-width: 640px) {
+  :root {
+    --font-size: 1.1em; } }
 
 /* CLASSLESS */
 body {
@@ -230,25 +234,3 @@ button:active {
   box-shadow: none;
   position: relative;
   top: .2em; }
-
-body.debug:before {
-  content: "STANDARD >= 1280";
-  font-family: monospace;
-  color: red; }
-
-/* LARGE */
-@media screen and (max-width: 1024px) {
-  body.debug:before {
-    content: "768 <--> 1024"; } }
-
-/* MEDIUM */
-@media screen and (max-width: 768px) {
-  body.debug:before {
-    content: "MEDIUM: 640 <--> 768"; } }
-
-/* SMALL */
-@media screen and (max-width: 640px) {
-  body.debug:before {
-    content: "SMALL <= 640"; }
-  :root {
-    --font-size: 1.1em; } }

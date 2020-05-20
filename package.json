@@ -1,7 +1,7 @@
 {
 	"name": "modesto",
 	"description": "Modesto CSS Framework",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"main": "modesto.css",
 	"author": "Nicholas Almeida @nalmeida",
 	"repository": {
@@ -35,7 +35,8 @@
 		"build": "npm run copy && npm run scss ; npm run css:min ; npm run version",
 		"version": "node node_modules/replace/bin/replace.js '__VERSION__' ${npm_package_version} public/css/modesto.css public/css/modesto.min.css public/index.html",
 		"bump": "npm --no-git-tag-version version",
-		"dist": "npm run scss ; npm run css:min ; npm run version ; cp public/css/*.css . ; cp public/css/*.map . ; npm publish && curl -I https://unpkg.com/modesto"
+		"dist": "npm run scss ; npm run css:min ; npm run version ; cp public/css/*.css . ; cp public/css/*.map .",
+		"publish": "npm publish && curl -I https://unpkg.com/modesto"
 	},
 	"dependencies": {
 		"autoprefixer": "^9.5.0",
