@@ -1,21 +1,21 @@
 {
 	"name": "modesto",
 	"description": "Modesto CSS Framework",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"main": "modesto.css",
 	"author": "Nicholas Almeida @nalmeida",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nalmeida/modesto.git"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nalmeida/modesto.git"
 	},
 	"homepage": "https://modesto.netlify.app/",
-  "keywords": [
-    "css",
+	"keywords": [
+		"css",
 		"stylesheet",
 		"classless",
 		"classless-theme",
 		"classless-css ",
-    "modesto"
+		"modesto"
 	],
 	"license": "GNU GPLv3",
 	"bugs": {
@@ -24,20 +24,18 @@
 	"scripts": {
 		"scss": "node-sass src/sass/modesto.scss public/css/modesto.css",
 		"css:min": "cp public/css/modesto.css public/css/modesto.min.css; postcss public/css/*.min.css -u autoprefixer cssnano -r -m",
-
 		"copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
 		"copy": "copyfiles -u 1 ./src/*.* ./src/assets/**/* public",
-
 		"watch:html": "onchange 'src/*.html' 'src/**/*.html' -- npm run copy:html",
 		"watch:sass": "node-sass --watch src/sass -o public/css",
 		"watch:assets": "onchange 'src/assets/**/*' -- npm run copy",
 		"watch": "npm run watch:html & npm run watch:sass & npm run watch:assets",
-
 		"serve": "browser-sync start --server public --files public --port 1337 --no-open ",
 		"develop": "npm run copy && npm run scss ; npm run css:min ; npm run watch & npm run serve",
-		"build": "npm run copy && npm run scss ; npm run css:min",
+		"build": "npm run copy && npm run scss ; npm run css:min ; npm run version",
+		"version": "node node_modules/replace/bin/replace.js '__VERSION__' ${npm_package_version} public/css/modesto.css public/css/modesto.min.css public/index.html",
 		"bump": "npm --no-git-tag-version version",
-		"dist": "npm run scss ; npm run css:min ; cp public/css/*.css . ; cp public/css/*.map . ; npm publish && curl -I https://unpkg.com/modesto"
+		"dist": "npm run scss ; npm run css:min ; npm run version ; cp public/css/*.css . ; cp public/css/*.map . ; npm publish && curl -I https://unpkg.com/modesto"
 	},
 	"dependencies": {
 		"autoprefixer": "^9.5.0",
@@ -46,7 +44,8 @@
 		"cssnano": "^4.1.10",
 		"node-sass": "^4.14.1",
 		"onchange": "^7.0.1",
-		"postcss-cli": "^7.1.1"
+		"postcss-cli": "^7.1.1",
+		"replace": "^1.2.0"
 	},
 	"browserslist": [
 		"last 2 versions"
