@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! Modesto CSS 1.0.2 */
+/*! Modesto CSS 1.0.4 */
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
@@ -31,11 +31,6 @@ body {
   font-size: 100%;
   line-height: 1.5;
   text-rendering: optimizeSpeed; }
-
-/* Make images easier to work with */
-img {
-  display: block;
-  max-width: 100%; }
 
 /* Inherit fonts for inputs and buttons */
 input,
@@ -183,7 +178,6 @@ p {
 
 figcaption {
   margin-top: 0;
-  line-height: .85em;
   font-size: .85em; }
 
 ul {
