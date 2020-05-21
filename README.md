@@ -46,9 +46,21 @@ This "bootstrap" is based on the awesome [HTML SASS Jumpstart](https://github.co
 
 Use this as the "Publish command" if needed by hosting such as Netlify.
 
-**`npm run serve`**
+**`npm run dist`**
 
-> Serve latest build files at localhost:1337
+> Replaces `__VERSION__` string inside html and css file for the version from package.json file, generates the CSS files and copy them into the root of the project.
+
+---
+
+In order publish a new version and documentation:
+
+```
+$ npm run dist
+$ git add .
+$ git commit -m ...
+$ git push origin master
+$ npm publish
+```
 
 ---
 

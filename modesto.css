@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! Modesto CSS 1.0.6 */
+/*! Modesto CSS 1.0.7 */
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
@@ -163,6 +163,14 @@ ol {
 li {
   line-height: 1.35em;
   margin-bottom: .5em; }
+
+h1, h2, h3, h4, li, a, figcaption {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
 
 hr {
   margin: 2.5em auto;
