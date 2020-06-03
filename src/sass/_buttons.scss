@@ -7,7 +7,7 @@ button {
 	border: solid 1px var(--color-bg);
 	background: #ffffff;
 	padding:.5em .9em;
-	box-shadow: 0px .25em 0px var(--color-bg);
+	box-shadow: 0px .30em 0px var(--color-bg);
 	margin-bottom: .2em;
 	position: relative;
 }
@@ -16,16 +16,13 @@ input[type=submit]:hover,
 input[type=reset]:hover,
 button:hover {
 	color: var(--color-link);
-
-	background: #ffffff;
 	box-shadow: 0px .15em 0px var(--color-bg);
-	top: .1em;
-	margin-bottom: .1em;
+	top: .15em;
 }
 
 input[type=submit]:active,
 input[type=reset]:active,
 button:active {
 	box-shadow: none;
-	top: .2em;
+	top: .25em;
 }
