@@ -1,6 +1,509 @@
-/*! Modesto CSS __VERSION__ */
-@import "reset";
-@import "theme";
-@import "responsive";
-@import "typography";
-@import "buttons";
+:root {
+	--border-radius: .3em;
+	--font-size: 20px;
+	--font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-serif: Georgia, "Times New Roman", Times, serif;
+	--font-mono: Courier, monospace;
+
+	--color-text: #1A1A1A;
+	--color-link: #0070F3;
+	--color-link-hover: #0000FF;
+	--color-link-visited: #5C20C0;
+
+	--color-bg-page: #FFFFFF;
+	--color-bg-lighter: #EFEFEF;
+	--color-bg-darker: #CCCCCC;
+}
+
+* {
+	/* Reset margins and padding */
+	margin: 0;
+	padding: 0;
+}
+
+address,
+area,
+article,
+aside,
+audio,
+blockquote,
+datalist,
+details,
+dl,
+fieldset,
+figure,
+form,
+input,
+iframe,
+meter,
+nav,
+ol,
+optgroup,
+option,
+output,
+p,
+pre,
+progress,
+ruby,
+section,
+table,
+textarea,
+ul,
+video {
+	/* Margins for most elements */
+	margin-bottom: 1em;
+}
+
+html,
+input,
+select,
+button {
+	/* Set body font family and some finicky elements */
+	font-family: var(--font-primary);
+}
+
+body {
+	/* Center body in page */
+	margin: 0 auto;
+	padding: 0 2em;
+	max-width: 992px;
+	overflow-x: hidden;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	background: var(--color-bg-page);
+
+	/* Main body text */
+	color: var(--color-text);
+	font-size: var(--font-size);
+
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1em;
+	color: var(--color-text);
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.7em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+h5 {
+	font-size: 1em;
+}
+
+h6 {
+	font-size: .875em;
+}
+
+h1>a,
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a {
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+h1>a:after,
+h2>a:after,
+h3>a:after,
+h4>a:after,
+h5>a:after,
+h6>a:after {
+	color: var(--color-bg-darker);
+	content: "#";
+	font-weight: 400;
+	margin-left: .25em;
+}
+
+h1>a:visited,
+h2>a:visited,
+h3>a:visited,
+h4>a:visited,
+h5>a:visited,
+h6>a:visited {
+	color: var(--color-text);
+}
+
+p {
+	margin-bottom: 1.2em;
+}
+
+a {
+	color: var(--color-link);
+}
+
+a:focus {
+	outline: 2px solid;
+	outline-offset: 2px;
+}
+
+a:hover,
+a:visited:hover {
+	color: var(--color-link-hover);
+}
+
+a:visited {
+	color: var(--color-link-visited)
+}
+
+
+abbr:hover {
+	/* Set the '?' cursor while hovering an abbreviation */
+	cursor: help;
+}
+
+blockquote {
+	font-family: var(--font-serif);
+	font-style: italic;
+	;
+	padding: 1.5rem;
+	background: var(--color-bg-lighter);
+	border-left: 5px solid var(--color-bg-darker);
+	margin: 1.5em 0;
+	padding: .5em;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+	color: var(--color-bg-darker);
+	content: open-quote;
+	font-size: 5em;
+	line-height: 0;
+	margin-right: .2em;
+	margin-top: .4em;
+	float: left;
+}
+
+abbr {
+	cursor: help;
+}
+
+blockquote *:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.button {
+	appearance: button;
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+// Button
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	cursor: pointer;
+	font-size: .85em;
+	border-radius: var(--border-radius);
+	border: solid 1px var(--color-bg-darker);
+	background: #FFFFFF;
+	padding: .7em .9em .655em .9em;
+	position: relative;
+	box-shadow: 0px .25em 0px var(--color-bg-darker);
+	margin-bottom: .2em;
+}
+
+.button:focus,
+.button:hover,
+button:focus:enabled,
+button:hover:enabled,
+input[type="submit"]:hover:enabled,
+input[type="reset"]:hover:enabled,
+input[type="button"]:focus:enabled,
+input[type="button"]:hover:enabled {
+	color: var(--color-link);
+	box-shadow: 0px 0.15em 0px #CCCCCC;
+	top: 0.15em;
+}
+
+// Button mouse down
+.button:active,
+button:active:enabled,
+input[type="submit"]:active:enabled,
+input[type="reset"]:active:enabled,
+input[type="button"]:active:enabled {
+	box-shadow: none;
+	top: 0.25em;
+}
+
+// Button Disabled
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+	cursor: default;
+	opacity: .5;
+
+	/* Set the [X] cursor while hovering a disabled link */
+	cursor: not-allowed;
+}
+
+code,
+pre,
+kbd,
+samp {
+	/* Set the font family for monospaced elements */
+	font-family: var(--font-mono);
+
+	background-color: var(--color-bg-lighter);
+	font-size: .9em;
+}
+
+code,
+kbd,
+samp {
+	overflow-x: auto;
+	padding: .2em .3em .1em;
+	border-radius: var(--border-radius);
+}
+
+kbd {
+	/* Makes the kbd element look like a keyboard key */
+	border-bottom: 3px solid var(--color-bg-darker);
+}
+
+pre {
+	padding: .4em .6em;
+	border-radius: var(--border-radius);
+	max-width: 100%;
+	overflow: auto;
+}
+
+pre code {
+	/* When <code> is in a <pre>, reset it's formatting to blend in */
+	font-size: .8em;
+}
+
+details {
+	/* Make the <details> look more "clickable" */
+	padding: .6rem 1rem;
+	background: var(--color-bg-lighter);
+	border: 1px solid var(--color-bg-darker);
+	border-radius: var(--border-radius);
+}
+
+summary {
+	/* Makes the <summary> look more like a "clickable" link with the pointer cursor */
+	cursor: pointer;
+	font-weight: bold;
+}
+
+details[open] {
+	/* Adjust the <details> padding while open */
+	padding-bottom: .75rem;
+}
+
+details[open] summary {
+	/* Adjust the <details> padding while open */
+	margin-bottom: 6px;
+}
+
+details[open]>*:last-child {
+	/* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd::before {
+	/* Add an arrow to data table definitions */
+	content: '→ ';
+}
+
+hr {
+	/* Reset the border of the <hr> separator, then set a better line */
+	border: 0;
+	border-bottom: 1px solid var(--color-bg-darker);
+	margin: 2em auto;
+
+}
+
+fieldset {
+	margin-top: 1rem;
+	padding: 1rem;
+	border: 1px solid var(--color-bg-darker);
+	border-radius: var(--border-radius);
+}
+
+legend {
+	padding: auto .5rem;
+}
+
+table {
+	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+	border-collapse: collapse;
+	width: 100%
+}
+
+td,
+th {
+	border: 1px solid var(--color-bg-darker);
+	text-align: left;
+	padding: .5rem;
+}
+
+th {
+	background: var(--color-bg-lighter);
+}
+
+tr:nth-child(even) {
+	/* Set every other cell slightly darker. Improves readability. */
+	background: var(--color-bg-lighter);
+}
+
+table caption {
+	font-weight: bold;
+	margin-bottom: .5rem;
+}
+
+input,
+iframe,
+video,
+audio,
+textarea {
+	/* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
+	max-width: 100%;
+}
+
+
+ol {
+	list-style-position: inside;
+}
+
+ul {
+	margin: 1em;
+}
+
+li {
+	margin-top: .4em;
+}
+
+li::marker {
+	font-weight: 700;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	margin-bottom: 0;
+}
+
+textarea,
+select,
+input {
+	padding: .3em .6em;
+	font-size: 1em;
+	margin-bottom: .5rem;
+	color: var(--color-text);
+	border: 1px solid var(--color-bg-darker);
+	border-radius: var(--border-radius);
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+// Breakpoints
+// reference: https://dev.to/rstacruz/what-media-query-breakpoints-should-i-use-292c
+
+// DEBUG
+// body::before{
+// 	content: "Desktop > 768";
+// 	text-align: center;
+// 	display:inline-block;
+// 	width: 100%;
+// 	color: red;
+// 	background-color: lightpink;
+// }
+
+@media screen and (max-width: 768px) {
+	:root {
+		--font-size: 17px;
+	}
+
+	body {
+		margin: 1em;
+		padding: 0;
+		border: 0;
+	}
+
+	textarea,
+	select,
+	label,
+	select,
+	input {
+		font-size: 1.2em;
+	}
+
+	code,
+	pre,
+	kbd,
+	samp {
+		font-size: 1em;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.7em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	h4 {
+		font-size: 1em;
+	}
+
+	h5 {
+		font-size: .875em;
+	}
+
+	h6 {
+		font-size: .675em;
+	}
+
+	// DEBUG
+	// body::before{
+	// 	content: "Mobile < 768";
+	// 	text-align: center;
+	// 	display:inline-block;
+	// 	width: 100%;
+	// 	color: red;
+	// 	background-color: yellow;
+	// }
+}

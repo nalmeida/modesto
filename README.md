@@ -54,6 +54,8 @@ Use this as the "Publish command" if needed by hosting such as Netlify.
 
 In order publish a new version and documentation:
 
+1. Change the `version` inside the `package.json`.
+
 ```
 $ npm run dist
 $ git add .

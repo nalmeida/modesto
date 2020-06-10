@@ -9,13 +9,10 @@
 		<link href="css/modesto.css" rel="stylesheet" />
 
 		<style>
-			main {
-				margin: 2em;
-			}
 			h1 code {
-				font-size: 1rem;
+				font-size: .8rem;
 				display: inline-block;
-				vertical-align: .8em;
+				vertical-align: .3em;
 				line-height: 1.2em;
 			}
 		</style>
@@ -28,7 +25,7 @@
 		<h1>Modesto CSS <code>__VERSION__</code></h1>
 
 		<p>
-			Um <a href="css/modesto.css" class="button">framework CSS</a> simples (fortemente inspirado pelo visual do <a href="https://codyhouse.co/ds/docs/framework">CodyFrame</a>), para estilizar minimamente um conteúdo tipo "texto" sem precisar adicionar nenhuma classe (ou o mínimo) aos elementos nativos.
+			Um <a href="css/modesto.css">framework CSS</a> simples (fortemente inspirado pelo visual do <a href="https://codyhouse.co/ds/docs/framework">CodyFrame</a>), para estilizar minimamente um conteúdo tipo "texto" sem precisar adicionar nenhuma classe (ou o mínimo) aos elementos nativos.
 		</p>
 
 		<p>
@@ -38,20 +35,6 @@
 		<blockquote>
 			<strong>modesto:</strong> dotado de modéstia; isento de vaidade; simples, despretensioso.
 		</blockquote>
-
-		<hr>
-
-		<h2>Utilização</h2>
-
-		<p>
-			Versão com o <a href="https://unpkg.com/modesto@latest/modesto.css">CSS aberto</a>:
-		</p>
-		<pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/modesto@latest/modesto.css"&gt;</code></pre>
-		<p>
-			Versão com o <a href="https://unpkg.com/modesto@latest/modesto.min.css">CSS minificado</a>:
-		</p>
-		<pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/modesto@latest/modesto.min.css"&gt;</code></pre>
-
 
 		<hr>
 
@@ -67,124 +50,26 @@
 
 		<hr>
 
-		<h2>Títulos</h2>
-
-		<h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
-		<h5>Heading 5</h5>
-		<h6>Heading 6</h6>
-
-		<h1><a href="#">Heading 1 with link</a></h1>
-		<h2><a href="#">Heading 2 with link</a></h2>
-		<h3><a href="#">Heading 3 with link</a></h3>
-		<h4><a href="#">Heading 4 with link</a></h4>
-		<h5><a href="#">Heading 5 with link</a></h5>
-		<h6><a href="#">Heading 6 with link</a></h6>
-
-		<hr>
-
-		<h2>Tipografia</h2>
-		<p>This is a <code>&lt;p&gt;</code>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at imperdiet sem. Nam a orci in ligula egestas rutrum non at mauris. Suspendisse luctus enim augue, non ullamcorper leo porta et. Praesent sit amet semper tortor. Duis eleifend orci eu enim ultrices congue. Fusce non maximus lorem. Nunc magna metus, euismod a ipsum in, aliquet efficitur orci. Duis sodales blandit mi, a lobortis felis rutrum et. Mauris sollicitudin augue quis tincidunt pretium. Morbi ac lorem aliquam nisi ornare venenatis ut vel diam. Aenean vulputate vehicula dapibus. Proin congue venenatis neque, at viverra est imperdiet nec.</p>
-
-		<ul>
-			<li>This is <b>&lt;b&gt;</b></li>
-			<li>This is <strong>&lt;strong&gt;</strong></li>
-			<li>This is <i>&lt;i&gt;</i></li>
-			<li>This is <em>&lt;em&gt;</em></li>
-			<li>This is <mark>&lt;mark&gt;</mark></li>
-			<li>This is <s>&lt;s&gt;</s></li>
-			<li>This is <del>&lt;del&gt;</del></li>
-			<li>This is <a href="#">&lt;a&gt;</a></li>
-			<li>This is <sub>&lt;sub&gt;</sub></li>
-			<li>This is <sup>&lt;sup&gt;</sup></li>
-			<li>This is <small>&lt;small&gt;</small></li>
-		</ul>
-		<hr>
-
-		<h2>Imagens</h2>
-
-
-		<h3>Imagem inline</h3>
-		<p>Aqui vai uma imagem <img src="assets/img/husky.jpg" height="28" alt="Cachorro Husky" loading="lazy"> inline.</p>
-
-		<h3>Imagem</h3>
-		<img src="assets/img/husky.jpg" alt="Cachorro Husky" loading="lazy">
-
-		<h3>Imagem com link</h3>
-		<a href="assets/img/husky.jpg"><img src="assets/img/husky.jpg" alt="Cachorro Husky" loading="lazy"></a>
-
-		<h3>Imagem dentro de uma <code>figure</code> com legenda</h3>
-		<figure>
-			<img src="assets/img/husky.jpg" alt="Cachorro Husky" loading="lazy">
-			<figcaption>Cachorro Husky</figcaption>
-		</figure>
-
-		<hr>
-
-		<h2>Listas</h2>
-
-		<h3>Lista não ordenada</h3>
-		<ul>
-			<li>Lorem ipsum dolor sit amet</li>
-			<li>Duis eleifend orci eu enim. Nunc magna metus, euismod a ipsum in, aliquet efficitur orci. Nunc magna metus, euismod a ipsum in, aliquet efficitur orci</li>
-			<li>Nunc magna metus, euismod a ipsum in, aliquet efficitur orci</li>
-		</ul>
-
-		<h3>Lista ordenada</h3>
-
-		<ol>
-			<li>Lorem ipsum dolor sit amet</li>
-			<li>Duis eleifend orci eu enim</li>
-			<li>Nunc magna metus, euismod a ipsum in, aliquet efficitur orci. Nunc magna metus, euismod a ipsum in, aliquet efficitur orci. Nunc magna metus, euismod a ipsum in, aliquet efficitur orci. Nunc magna metus, euismod a ipsum in, aliquet efficitur orci. Nunc magna metus, euismod a ipsum in, aliquet efficitur orci. </li>
-			<li>Lorem ipsum dolor sit amet</li>
-			<li>Duis eleifend orci eu enim</li>
-			<li>Nunc magna metus, euismod a ipsum in, aliquet efficitur orci</li>
-			<li>Lorem ipsum dolor sit amet</li>
-			<li>Duis eleifend orci eu enim</li>
-			<li>Nunc magna metus, euismod a ipsum in, aliquet efficitur orci</li>
-			<li>Lorem ipsum dolor sit amet</li>
-			<li>Duis eleifend orci eu enim</li>
-			<li>Nunc magna metus, euismod a ipsum in, aliquet efficitur orci</li>
-		</ol>
-
-		<hr>
-
-		<h2>Código</h2>
+		<h2>Utilização</h2>
 
 		<p>
-		 Código inline: <code>Lorem ipsum dolor sit amet</code>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <code>📁exercitation ullamco laboris nisi ut aliquip ex ea commodo</code> consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Versão com o <a href="https://unpkg.com/modesto@latest/modesto.css">CSS aberto</a>:
+		</p>
+		<pre><code>&lt;link href="https://unpkg.com/modesto@latest/modesto.css"&gt;</code></pre>
+		<p>
+			Versão com o <a href="https://unpkg.com/modesto@latest/modesto.min.css">CSS minificado</a>:
+		</p>
+		<pre><code>&lt;link href="https://unpkg.com/modesto@latest/modesto.min.css"&gt;</code></pre>
+
+		<hr>
+
+		<h2>Documentação</h2>
+
+		<p>
+			Escreva um HTML semântico.
 		</p>
 
-<pre>
-<code>var teste = true;
-function retornaTeste() {
-	return teste;
-}
-retornaTeste();
-</code>
-</pre>
-
-		<hr>
-
-		<h2>Citação</h2>
-
-		<blockquote>
-			<p>Se você quer escrever um site que seja rápido, use um computador lento. <strong>@nalmeida.</strong></p>
-		</blockquote>
-
-		<blockquote>
-			<p>If you want to write fast software, use a slow computer. If you want to write fast software, use a slow computer. If you want to write fast software, use a slow computer. If you want to write fast software, use a slow computer. If you want to write fast software, use a slow computer. If you want to write fast software, use a slow computer. <strong>@nalmeida.</strong></p>
-		</blockquote>
-
-		<hr>
-
-		<h2>Botões</h2>
-
-		<button name="Botão">BOTÃO</button>
-		<input type="submit" name="Enviar">
-		<input type="reset" name="Cancelar">
+		<p><a href="exemplo.html" class="button">→ Página de exemplo com elementos HTML</a></p>
 
 		<hr>
 
@@ -198,6 +83,9 @@ retornaTeste();
 			<li>🛠 Lista de ferramentas, snippets e coisas úteis de CSS: <a href="https://undesign.learn.uno/snippets/">https://undesign.learn.uno/snippets/</a></li>
 			<li><img src="favicon-16x16.png" alt="Modesto Favicon" loading="lazy"> Favicon criado pelo <a href="https://favicon.io/favicon-generator/">Favicon.io</a> usando a fonte <a href="https://fonts.google.com/specimen/Rubik">Rubik</a> e o otimizado usando as dicas do post do <a href="https://jaydenseric.com/blog/favicon-optimization">Jayden Seric</a></li>
 		</ul>
+
+		<hr>
+
 		<h2>Outros frameworks</h2>
 
 		<ul>
