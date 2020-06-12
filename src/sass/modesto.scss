@@ -1,3 +1,4 @@
+/*! Modesto CSS __VERSION__ */
 :root {
 	--border-radius: .3em;
 	--font-size: 20px;
@@ -85,7 +86,7 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 1em;
+	line-height: 1.2em;
 	color: var(--color-text);
 	margin-top: .5em;
 	margin-bottom: .5em;
@@ -230,14 +231,15 @@ input[type="button"] {
 
 .button:focus,
 .button:hover,
-button:focus:enabled,
-button:hover:enabled,
+button:focus,
+button:hover,
 input[type="submit"]:hover:enabled,
 input[type="reset"]:hover:enabled,
 input[type="button"]:focus:enabled,
 input[type="button"]:hover:enabled {
 	color: var(--color-link);
-	box-shadow: 0px 0.15em 0px #CCCCCC;
+	border-color: var(--color-link);
+	box-shadow: 0px 0.15em 0px var(--color-bg-darker);
 	top: 0.15em;
 }
 
@@ -427,6 +429,12 @@ input {
 	border-radius: var(--border-radius);
 	box-shadow: none;
 	box-sizing: border-box;
+}
+
+textarea:focus,
+select:focus,
+input:focus {
+	border: 1px solid var(--color-link);
 }
 
 img {

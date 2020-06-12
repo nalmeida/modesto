@@ -1,7 +1,7 @@
 {
 	"name": "modesto",
 	"description": "Modesto CSS Framework",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"main": "modesto.css",
 	"author": "Nicholas Almeida @nalmeida",
 	"repository": {
