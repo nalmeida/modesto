@@ -36,7 +36,7 @@
 		"version": "replace '__VERSION__' ${npm_package_version} public/css/modesto.css public/css/modesto.min.css public/index.html",
 		"html:replace": "replace '<link href=\"css/modesto.css\" rel=\"stylesheet\" />' '<link href=\"css/modesto.min.css\" rel=\"stylesheet\" />' public/index.html",
 		"bump": "npm --no-git-tag-version version",
-		"dist": "npm run scss ; npm run css:min ; npm run version ; cp public/css/*.css . ; cp public/css/*.map ."
+		"dist": "npm run scss ; npm run css:min ; npm run version ; rm -f public/css/modesto.min.css.map ./modesto.min.css.map ; cp public/css/*.css ."
 	},
 	"dependencies": {
 		"browser-sync": "^3.0.4",
