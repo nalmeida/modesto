@@ -22,37 +22,42 @@
 		"url": "https://github.com/nalmeida/modesto/issues"
 	},
 	"scripts": {
-		"scss": "node-sass src/sass/modesto.scss public/css/modesto.css",
-		"css:min": "cp public/css/modesto.css public/css/modesto.min.css; postcss public/css/*.min.css -u autoprefixer cssnano -r -m",
+		"scss": "sass src/sass/modesto.scss public/css/modesto.css",
+		"css:min": "cp public/css/modesto.css public/css/modesto.min.css; postcss public/css/*.min.css --use autoprefixer --use cssnano --replace --no-map",
 		"copy:html": "copyfiles -u 1 ./src/*.html ./src/**/*.html public",
 		"copy": "copyfiles -u 1 ./src/*.* ./src/assets/**/* public",
 		"watch:html": "onchange 'src/*.html' 'src/**/*.html' -- npm run copy:html",
-		"watch:sass": "node-sass --watch src/sass -o public/css",
+		"watch:sass": "sass --watch src/sass:public/css",
 		"watch:assets": "onchange 'src/assets/**/*' -- npm run copy",
 		"watch": "npm run watch:html & npm run watch:sass & npm run watch:assets",
 		"serve": "browser-sync start --server public --files public --port 1337 --no-open ",
 		"develop": "npm run copy && npm run scss ; npm run css:min ; npm run watch & npm run serve",
 		"build": "npm run copy && npm run scss ; npm run css:min ; npm run version; npm run html:replace",
-		"version": "node node_modules/replace/bin/replace.js '__VERSION__' ${npm_package_version} public/css/modesto.css public/css/modesto.min.css public/index.html",
-		"html:replace": "node node_modules/replace/bin/replace.js '<link href=\"css/modesto.css\" rel=\"stylesheet\" />' '<link href=\"css/modesto.min.css\" rel=\"stylesheet\" />' public/index.html",
+		"version": "replace '__VERSION__' ${npm_package_version} public/css/modesto.css public/css/modesto.min.css public/index.html",
+		"html:replace": "replace '<link href=\"css/modesto.css\" rel=\"stylesheet\" />' '<link href=\"css/modesto.min.css\" rel=\"stylesheet\" />' public/index.html",
 		"bump": "npm --no-git-tag-version version",
-		"dist": "npm run scss ; npm run css:min ; npm run version ; cp public/css/*.css . ; cp public/css/*.map ."
+		"dist": "npm run scss ; npm run css:min ; npm run version ; rm -f public/css/modesto.min.css.map ./modesto.min.css.map ; cp public/css/*.css ."
 	},
 	"dependencies": {
-		"autoprefixer": "^9.5.0",
-		"browser-sync": "^2.26.3",
-		"copyfiles": "^2.1.0",
-		"cssnano": "^4.1.10",
-		"node-sass": "^9.0.0",
-		"onchange": "^7.0.1",
-		"postcss-cli": "^7.1.1",
-		"replace": "^1.2.0"
+		"browser-sync": "^3.0.4",
+		"copyfiles": "^2.4.1",
+		"onchange": "^7.1.0"
 	},
 	"browserslist": [
 		"last 2 versions"
 	],
-	"devDependencies": {},
 	"optionalDependencies": {
 		"fsevents": "^2.1.3"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.5.0",
+		"cssnano": "^7.1.5",
+		"postcss": "^8.5.9",
+		"postcss-cli": "^11.0.1",
+		"replace": "^1.2.2",
+		"sass": "^1.99.0"
+	},
+	"overrides": {
+		"minimatch": "3.1.5"
 	}
 }
