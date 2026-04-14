@@ -344,7 +344,7 @@ fieldset {
 }
 
 legend {
-  padding: auto 0.5rem;
+  padding: 0 0.5rem;
 }
 
 table {
