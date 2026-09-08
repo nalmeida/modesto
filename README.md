@@ -34,15 +34,15 @@ Versão com o [CSS minificado](https://unpkg.com/modesto@latest/modesto.min.css)
 
 ## Development Scripts
 
-This "bootstrap" is based on the awesome [HTML SASS Jumpstart](https://github.com/5t3ph/html-sass-jumpstart) from [5t3ph](https://github.com/5t3ph).
+The build uses only Node.js built-in modules. The CSS source is intentionally plain CSS (kept in `src/sass/modesto.scss` for backward-compatible project structure), so no Sass compiler, PostCSS plugin, file watcher, or development server dependency is required.
 
 **`npm run develop`**
 
-> Serve with hot reload at localhost:1337
+> Build and serve the site at localhost:1337. Run the command again after editing a file.
 
 **`npm run build`**
 
-> Generate minified, autoprefixed CSS for production
+> Copy the static site and generate the regular and minified CSS files for production.
 
 Use this as the "Publish command" if needed by hosting such as Netlify.
 
