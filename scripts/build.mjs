@@ -1,4 +1,4 @@
-import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -11,6 +11,17 @@ function cssFromSource(sourceCss) {
   return sourceCss
     .replace(/^\s*\/\/.*(?:\r?\n|$)/gm, '')
     .replaceAll('__VERSION__', packageJson.version);
+}
+
+async function replaceVersionMarkers(directory) {
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const path = resolve(directory, entry.name);
+    if (entry.isDirectory()) await replaceVersionMarkers(path);
+    if (entry.isFile() && entry.name.endsWith('.html')) {
+      const html = await readFile(path, 'utf8');
+      await writeFile(path, html.replaceAll('__VERSION__', packageJson.version));
+    }
+  }
 }
 
 function minifyCss(css) {
@@ -61,6 +72,7 @@ function minifyCss(css) {
 await rm(output, { recursive: true, force: true });
 await cp(source, output, { recursive: true });
 await rm(resolve(output, 'sass'), { recursive: true, force: true });
+await replaceVersionMarkers(output);
 
 const css = cssFromSource(await readFile(resolve(source, 'sass/modesto.scss'), 'utf8'));
 await mkdir(resolve(output, 'css'), { recursive: true });
