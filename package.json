@@ -23,7 +23,7 @@
 	},
 	"scripts": {
 		"build": "node scripts/build.mjs",
-		"develop": "npm run build && node scripts/serve.mjs",
+		"dev": "npm run build && node scripts/serve.mjs",
 		"bump": "npm --no-git-tag-version version",
 		"dist": "npm run build && cp public/css/modesto.css public/css/modesto.min.css ."
 	},
