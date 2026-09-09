@@ -28,6 +28,6 @@
 		"dist": "npm run build && cp public/css/modesto.css public/css/modesto.min.css ."
 	},
 	"engines": {
-		"node": ">=22"
+		"node": ">=24"
 	}
 }
